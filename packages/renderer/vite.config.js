@@ -4,6 +4,9 @@ import {chrome} from '../../.electron-vendors.cache.json';
 import {join} from 'path';
 import vue from '@vitejs/plugin-vue';
 import {renderer} from 'unplugin-auto-expose';
+import AutoImport from 'unplugin-auto-import/vite';
+import Components from 'unplugin-vue-components/vite';
+import {ElementPlusResolver} from 'unplugin-vue-components/resolvers';
 
 const PACKAGE_ROOT = __dirname;
 
@@ -41,6 +44,14 @@ const config = {
   },
   plugins: [
     vue(),
+    AutoImport({
+      resolvers: [ElementPlusResolver()],
+      dts: join(PACKAGE_ROOT, './types/auto-import.d.ts'),
+    }),
+    Components({
+      resolvers: [ElementPlusResolver()],
+      dts: join(PACKAGE_ROOT, './types/components.d.ts'),
+    }),
     renderer.vite({
       preloadEntry: join(PACKAGE_ROOT, '../preload/src/index.ts'),
     }),
