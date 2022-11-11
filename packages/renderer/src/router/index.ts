@@ -1,7 +1,7 @@
-import { createRouter, createWebHashHistory } from 'vue-router';
-import { loadLayoutMiddleware } from '/@/router/middleware/loadLayout.middleware';
-import { RouteNamesEnum } from '/@/router/router.types';
-import { AppLayoutsEnum } from '/@/layouts/layouts.types';
+import {createRouter, createWebHashHistory} from 'vue-router';
+import {loadLayoutMiddleware} from '/@/router/middleware/loadLayout.middleware';
+import {RouteNamesEnum} from '/@/router/router.types';
+import {AppLayoutsEnum} from '/@/layouts/layouts.types';
 
 const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),

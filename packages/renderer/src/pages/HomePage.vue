@@ -11,9 +11,7 @@
           class="el-card-link"
           to="/parsers/vk"
         >
-          <el-card
-            shadow="hover"
-          >
+          <el-card shadow="hover">
             <div class="el-card-wrapper">
               <span>Вконтакте</span>
               <el-image
@@ -30,9 +28,7 @@
           class="el-card-link"
           to="/parsers/vk"
         >
-          <el-card
-            shadow="hover"
-          >
+          <el-card shadow="hover">
             <div class="el-card-wrapper">
               <span>Инстаграм</span>
               <el-image
