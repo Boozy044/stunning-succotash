@@ -52,9 +52,12 @@
   },
   "dependencies": {
     "@vueuse/core": "^9.5.0",
+    "electron-store": "^8.1.0",
     "electron-updater": "5.3.0",
     "element-plus": "^2.2.20",
+    "mysql2": "^2.3.3",
     "pinia": "^2.0.23",
+    "vk-io": "^4.7.0",
     "vue": "3.2.41",
     "vue-router": "^4.1.6"
   }

@@ -1,6 +1,7 @@
-import {app} from 'electron';
-import './security-restrictions';
-import {restoreOrCreateWindow} from '/@/mainWindow';
+import { app } from 'electron';
+import '/@/security-restrictions';
+import { restoreOrCreateWindow } from '/@/mainWindow';
+import '/@/ipc/controllers';
 
 /**
  * Prevent electron from running multiple instances.
@@ -61,6 +62,6 @@ if (import.meta.env.PROD) {
   app
     .whenReady()
     .then(() => import('electron-updater'))
-    .then(({autoUpdater}) => autoUpdater.checkForUpdatesAndNotify())
+    .then(({ autoUpdater }) => autoUpdater.checkForUpdatesAndNotify())
     .catch(e => console.error('Failed check updates:', e));
 }
