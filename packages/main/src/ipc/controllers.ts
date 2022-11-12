@@ -1,8 +1,8 @@
-import { ipcMain } from 'electron';
-import type { IpcMainInvokeEvent } from 'electron';
-import { saveSettings, getSettings } from '/@/ipc/localstorage';
-import { api } from '/@/ipc/vkApi';
-import { saveUsersInDatabase } from '/@/ipc/database';
+import {ipcMain} from 'electron';
+import type {IpcMainInvokeEvent} from 'electron';
+import {saveSettings, getSettings} from '/@/ipc/localstorage';
+import {api} from '/@/ipc/vkApi';
+import {saveUsersInDatabase} from '/@/ipc/database';
 
 ipcMain.handle('saveSettings', (event: IpcMainInvokeEvent, settings: string) => {
   try {
@@ -88,7 +88,6 @@ ipcMain.handle('startParsingVk', async (event: IpcMainInvokeEvent, groupId: stri
     }
 
     event.sender.send('stopParsingNotify');
-
   } catch (error) {
     event.sender.send('error', error);
   }

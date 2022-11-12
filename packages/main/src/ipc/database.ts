@@ -1,7 +1,7 @@
-import { createConnection } from 'mysql2/promise';
-import { getDatabase } from '/@/ipc/localstorage';
+import {createConnection} from 'mysql2/promise';
+import {getDatabase} from '/@/ipc/localstorage';
 
-import type { Responses } from 'vk-io';
+import type {Responses} from 'vk-io';
 
 const getConnection = async () => {
   const databaseSettings = getDatabase();

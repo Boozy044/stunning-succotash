@@ -64,9 +64,9 @@
 import {reactive} from 'vue';
 import {useTitle} from '@vueuse/core';
 import {storeToRefs} from 'pinia';
-import { ElNotification, ElLoading } from 'element-plus';
+import {ElNotification, ElLoading} from 'element-plus';
 import {useVkParserStore} from '/@/stores/vkParserStore';
-import { useSettingsStore } from '/@/stores/settingsStore';
+import {useSettingsStore} from '/@/stores/settingsStore';
 
 useTitle('Парсер Вконтакте');
 
@@ -96,7 +96,7 @@ window.api.notify.groupInfo((_event, value) => {
   addPairedGroup(value);
 });
 
-window.api.notify.stopParser((_event) => {
+window.api.notify.stopParser(_event => {
   loading.close();
   ElNotification({
     title: 'Успешно',

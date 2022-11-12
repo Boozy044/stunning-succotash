@@ -1,10 +1,10 @@
 /**
  * @module preload
  */
-import { contextBridge, ipcRenderer } from 'electron';
-import type { IpcRendererEvent } from 'electron';
-export { sha256sum } from './nodeCrypto';
-export { versions } from './versions';
+import {contextBridge, ipcRenderer} from 'electron';
+import type {IpcRendererEvent} from 'electron';
+export {sha256sum} from './nodeCrypto';
+export {versions} from './versions';
 
 contextBridge.exposeInMainWorld('api', {
   saveSettings: (settings: string) => ipcRenderer.invoke('saveSettings', settings),

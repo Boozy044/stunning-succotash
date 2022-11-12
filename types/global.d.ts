@@ -1,5 +1,5 @@
-export { };
-import type { IpcRendererEvent, IpcRenderer } from 'electron';
+export {};
+import type {IpcRendererEvent, IpcRenderer} from 'electron';
 
 declare global {
   interface Window {

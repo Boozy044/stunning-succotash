@@ -1,5 +1,5 @@
-import { ref, computed } from 'vue';
-import { defineStore } from 'pinia';
+import {ref, computed} from 'vue';
+import {defineStore} from 'pinia';
 
 export const useSettingsStore = defineStore('settings', () => {
   const settings = ref({
@@ -30,5 +30,5 @@ export const useSettingsStore = defineStore('settings', () => {
     console.log(settings);
   }
 
-  return { settings, vkToken, saveSettings, clearSettings, getSettings };
+  return {settings, vkToken, saveSettings, clearSettings, getSettings};
 });

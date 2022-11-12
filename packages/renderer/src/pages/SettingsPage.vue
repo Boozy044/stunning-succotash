@@ -111,9 +111,9 @@
 
 <script setup lang="ts">
 import {useTitle} from '@vueuse/core';
-import { ElNotification } from 'element-plus';
+import {ElNotification} from 'element-plus';
 import {storeToRefs} from 'pinia';
-import { useSettingsStore } from '/@/stores/settingsStore';
+import {useSettingsStore} from '/@/stores/settingsStore';
 
 useTitle('Настройки');
 
@@ -128,7 +128,6 @@ window.api.notify.saveSettings(() => {
     type: 'success',
   });
 });
-
 </script>
 
 <style scoped></style>
