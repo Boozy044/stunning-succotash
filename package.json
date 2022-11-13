@@ -1,11 +1,10 @@
 {
-  "name": "vite-electron-builder",
-  "description": "Secure boilerplate for Electron app based on Vite",
+  "name": "parsers",
+  "description": "",
   "private": true,
   "author": {
-    "email": "kozackunisoft@gmail.com",
-    "name": "Alex Kozack",
-    "url": "https://kozack.me"
+    "email": "boozy044@gmail.com",
+    "name": "Aleksander Buzmakov"
   },
   "main": "packages/main/dist/index.cjs",
   "scripts": {
